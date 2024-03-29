@@ -1,0 +1,41 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: api_route
+          uri: http://localhost:8123
+          predicates:
+            - Path=/api/**
+  main:
+    web-application-type: reactive
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+
+dubbo:
+  application:
+    name: dubbo-api-backend-provider
+    qos:
+      enable: true
+      port: 33333
+      accept:
+        foreign:
+          ip: false
+  protocol:
+    name: dubbo
+    port: 22223
+  registry:
+    id: nacos-registry
+    timeout: 50000
+    username:
+    parameters:
+      blockUntilConnectedWait: 50
+    address: nacos://172.19.222.28:8848
