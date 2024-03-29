@@ -20,12 +20,6 @@
 -   Spring Cloud Gateway 微服务网关
 -   Hutool、Apache Common Utils、Gson 等工具库
 
-### 前端
--   React 18
--   Ant Design Pro 5.x 脚手架
--   Ant Design & Procomponents 组件库
--   Umi 4 前端框架
--   OpenAPI 前端代码生成
 
 ## 接口首页（以下的是假数据）
 ![image-20230410165510040](https://user-images.githubusercontent.com/94662685/230869763-96af3fc0-1acc-4210-94a3-a18a20e09ea8.png)
